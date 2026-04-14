@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const core_1 = require("@nestjs/core");
+const app_module_1 = require("./app.module");
+const users_service_1 = require("./users/users.service");
+async function bootstrap() {
+    const app = await core_1.NestFactory.create(app_module_1.AppModule);
+    app.enableCors();
+    const usersService = app.get(users_service_1.UsersService);
+    const admin = await usersService.findByEmail('admin@ramshree.com');
+    if (!admin) {
+        await usersService.create({
+            email: 'admin@ramshree.com',
+            password: 'adminpassword',
+            role: 'admin',
+        });
+        console.log('Admin user created: admin@ramshree.com / adminpassword');
+    }
+    await app.listen(process.env.PORT ?? 3000);
+}
+bootstrap();
+//# sourceMappingURL=main.js.map
