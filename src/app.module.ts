@@ -10,6 +10,7 @@ import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/products.module';
 import { SettingsModule } from './settings/settings.module';
 import { ChatbotModule } from './chatbot/chatbot.module';
+import { BlogsModule } from './blogs/blogs.module';
 
 @Module({
   imports: [
@@ -42,8 +43,9 @@ import { ChatbotModule } from './chatbot/chatbot.module';
     ProductsModule,
     SettingsModule,
     ChatbotModule,
+    BlogsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
