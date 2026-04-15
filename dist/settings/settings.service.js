@@ -18,7 +18,6 @@ const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const setting_entity_1 = require("./entities/setting.entity");
 let SettingsService = class SettingsService {
-    settingsRepository;
     constructor(settingsRepository) {
         this.settingsRepository = settingsRepository;
     }
@@ -45,10 +44,10 @@ let SettingsService = class SettingsService {
         }
     }
 };
-exports.SettingsService = SettingsService;
-exports.SettingsService = SettingsService = __decorate([
+SettingsService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, typeorm_1.InjectRepository)(setting_entity_1.Setting)),
     __metadata("design:paramtypes", [typeorm_2.Repository])
 ], SettingsService);
+exports.SettingsService = SettingsService;
 //# sourceMappingURL=settings.service.js.map

@@ -20,7 +20,6 @@ const path_1 = require("path");
 const products_service_1 = require("./products.service");
 const jwt_auth_guard_1 = require("../auth/jwt-auth.guard");
 let ProductsController = class ProductsController {
-    productsService;
     constructor(productsService) {
         this.productsService = productsService;
     }
@@ -48,7 +47,6 @@ let ProductsController = class ProductsController {
         };
     }
 };
-exports.ProductsController = ProductsController;
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
@@ -115,8 +113,9 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], ProductsController.prototype, "uploadImage", null);
-exports.ProductsController = ProductsController = __decorate([
+ProductsController = __decorate([
     (0, common_1.Controller)('products'),
     __metadata("design:paramtypes", [products_service_1.ProductsService])
 ], ProductsController);
+exports.ProductsController = ProductsController;
 //# sourceMappingURL=products.controller.js.map

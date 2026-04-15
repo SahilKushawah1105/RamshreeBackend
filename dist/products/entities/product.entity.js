@@ -19,20 +19,9 @@ var ProductCategory;
     ProductCategory["GRAINS_PULSES"] = "Grains & Pulses";
     ProductCategory["BLENDED_SPICES"] = "Blended Spices";
     ProductCategory["OTHER"] = "Other";
-})(ProductCategory || (exports.ProductCategory = ProductCategory = {}));
+})(ProductCategory = exports.ProductCategory || (exports.ProductCategory = {}));
 let Product = class Product {
-    id;
-    name;
-    description;
-    shortDesc;
-    price;
-    image;
-    categories;
-    specs;
-    packaging;
-    createdAt;
 };
-exports.Product = Product;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
@@ -77,7 +66,8 @@ __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], Product.prototype, "createdAt", void 0);
-exports.Product = Product = __decorate([
+Product = __decorate([
     (0, typeorm_1.Entity)('products')
 ], Product);
+exports.Product = Product;
 //# sourceMappingURL=product.entity.js.map

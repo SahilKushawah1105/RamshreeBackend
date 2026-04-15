@@ -17,7 +17,6 @@ const common_1 = require("@nestjs/common");
 const chatbot_service_1 = require("./chatbot.service");
 const public_decorator_1 = require("../common/decorators/public.decorator");
 let ChatbotController = class ChatbotController {
-    chatbotService;
     constructor(chatbotService) {
         this.chatbotService = chatbotService;
     }
@@ -25,7 +24,6 @@ let ChatbotController = class ChatbotController {
         return this.chatbotService.getAIResponse(body.message, body.history || []);
     }
 };
-exports.ChatbotController = ChatbotController;
 __decorate([
     (0, public_decorator_1.Public)(),
     (0, common_1.Post)('query'),
@@ -34,8 +32,9 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], ChatbotController.prototype, "query", null);
-exports.ChatbotController = ChatbotController = __decorate([
+ChatbotController = __decorate([
     (0, common_1.Controller)('chatbot'),
     __metadata("design:paramtypes", [chatbot_service_1.ChatbotService])
 ], ChatbotController);
+exports.ChatbotController = ChatbotController;
 //# sourceMappingURL=chatbot.controller.js.map

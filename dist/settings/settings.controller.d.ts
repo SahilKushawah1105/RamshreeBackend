@@ -1,3 +1,4 @@
+/// <reference types="multer" />
 import { SettingsService } from './settings.service';
 export declare class SettingsController {
     private readonly settingsService;

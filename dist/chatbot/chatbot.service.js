@@ -18,10 +18,6 @@ const config_1 = require("@nestjs/config");
 const axios_1 = __importDefault(require("axios"));
 const settings_service_1 = require("../settings/settings.service");
 let ChatbotService = class ChatbotService {
-    configService;
-    settingsService;
-    baseUrl;
-    model;
     constructor(configService, settingsService) {
         this.configService = configService;
         this.settingsService = settingsService;
@@ -56,10 +52,10 @@ let ChatbotService = class ChatbotService {
         }
     }
 };
-exports.ChatbotService = ChatbotService;
-exports.ChatbotService = ChatbotService = __decorate([
+ChatbotService = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [config_1.ConfigService,
         settings_service_1.SettingsService])
 ], ChatbotService);
+exports.ChatbotService = ChatbotService;
 //# sourceMappingURL=chatbot.service.js.map

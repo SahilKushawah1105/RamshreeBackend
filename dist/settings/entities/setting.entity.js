@@ -12,10 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Setting = void 0;
 const typeorm_1 = require("typeorm");
 let Setting = class Setting {
-    name;
-    value;
 };
-exports.Setting = Setting;
 __decorate([
     (0, typeorm_1.PrimaryColumn)(),
     __metadata("design:type", String)
@@ -24,7 +21,8 @@ __decorate([
     (0, typeorm_1.Column)('text'),
     __metadata("design:type", String)
 ], Setting.prototype, "value", void 0);
-exports.Setting = Setting = __decorate([
+Setting = __decorate([
     (0, typeorm_1.Entity)('settings')
 ], Setting);
+exports.Setting = Setting;
 //# sourceMappingURL=setting.entity.js.map

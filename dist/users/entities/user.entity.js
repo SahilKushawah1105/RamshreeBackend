@@ -12,13 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const typeorm_1 = require("typeorm");
 let User = class User {
-    id;
-    email;
-    password;
-    role;
-    createdAt;
 };
-exports.User = User;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
@@ -39,7 +33,8 @@ __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], User.prototype, "createdAt", void 0);
-exports.User = User = __decorate([
+User = __decorate([
     (0, typeorm_1.Entity)('users')
 ], User);
+exports.User = User;
 //# sourceMappingURL=user.entity.js.map

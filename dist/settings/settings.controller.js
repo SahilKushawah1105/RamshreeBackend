@@ -20,7 +20,6 @@ const platform_express_1 = require("@nestjs/platform-express");
 const multer_1 = require("multer");
 const path_1 = require("path");
 let SettingsController = class SettingsController {
-    settingsService;
     constructor(settingsService) {
         this.settingsService = settingsService;
     }
@@ -36,7 +35,6 @@ let SettingsController = class SettingsController {
         };
     }
 };
-exports.SettingsController = SettingsController;
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
@@ -68,8 +66,9 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], SettingsController.prototype, "uploadFile", null);
-exports.SettingsController = SettingsController = __decorate([
+SettingsController = __decorate([
     (0, common_1.Controller)('settings'),
     __metadata("design:paramtypes", [settings_service_1.SettingsService])
 ], SettingsController);
+exports.SettingsController = SettingsController;
 //# sourceMappingURL=settings.controller.js.map

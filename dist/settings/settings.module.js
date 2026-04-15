@@ -14,8 +14,7 @@ const settings_controller_1 = require("./settings.controller");
 const setting_entity_1 = require("./entities/setting.entity");
 let SettingsModule = class SettingsModule {
 };
-exports.SettingsModule = SettingsModule;
-exports.SettingsModule = SettingsModule = __decorate([
+SettingsModule = __decorate([
     (0, common_1.Module)({
         imports: [typeorm_1.TypeOrmModule.forFeature([setting_entity_1.Setting])],
         providers: [settings_service_1.SettingsService],
@@ -23,4 +22,5 @@ exports.SettingsModule = SettingsModule = __decorate([
         exports: [settings_service_1.SettingsService],
     })
 ], SettingsModule);
+exports.SettingsModule = SettingsModule;
 //# sourceMappingURL=settings.module.js.map

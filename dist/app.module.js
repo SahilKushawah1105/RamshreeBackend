@@ -19,10 +19,10 @@ const users_module_1 = require("./users/users.module");
 const products_module_1 = require("./products/products.module");
 const settings_module_1 = require("./settings/settings.module");
 const chatbot_module_1 = require("./chatbot/chatbot.module");
+const blogs_module_1 = require("./blogs/blogs.module");
 let AppModule = class AppModule {
 };
-exports.AppModule = AppModule;
-exports.AppModule = AppModule = __decorate([
+AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
             config_1.ConfigModule.forRoot({
@@ -54,9 +54,11 @@ exports.AppModule = AppModule = __decorate([
             products_module_1.ProductsModule,
             settings_module_1.SettingsModule,
             chatbot_module_1.ChatbotModule,
+            blogs_module_1.BlogsModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
 ], AppModule);
+exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

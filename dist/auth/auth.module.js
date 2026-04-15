@@ -17,8 +17,7 @@ const users_module_1 = require("../users/users.module");
 const jwt_strategy_1 = require("./jwt.strategy");
 let AuthModule = class AuthModule {
 };
-exports.AuthModule = AuthModule;
-exports.AuthModule = AuthModule = __decorate([
+AuthModule = __decorate([
     (0, common_1.Module)({
         imports: [
             users_module_1.UsersModule,
@@ -40,4 +39,5 @@ exports.AuthModule = AuthModule = __decorate([
         exports: [auth_service_1.AuthService],
     })
 ], AuthModule);
+exports.AuthModule = AuthModule;
 //# sourceMappingURL=auth.module.js.map

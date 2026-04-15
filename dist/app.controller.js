@@ -16,10 +16,6 @@ const products_service_1 = require("./products/products.service");
 const settings_service_1 = require("./settings/settings.service");
 const users_service_1 = require("./users/users.service");
 let AppController = class AppController {
-    appService;
-    productsService;
-    settingsService;
-    usersService;
     constructor(appService, productsService, settingsService, usersService) {
         this.appService = appService;
         this.productsService = productsService;
@@ -42,7 +38,6 @@ let AppController = class AppController {
         };
     }
 };
-exports.AppController = AppController;
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
@@ -55,11 +50,12 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "getStats", null);
-exports.AppController = AppController = __decorate([
+AppController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [app_service_1.AppService,
         products_service_1.ProductsService,
         settings_service_1.SettingsService,
         users_service_1.UsersService])
 ], AppController);
+exports.AppController = AppController;
 //# sourceMappingURL=app.controller.js.map

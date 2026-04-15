@@ -13,12 +13,12 @@ const chatbot_service_1 = require("./chatbot.service");
 const settings_module_1 = require("../settings/settings.module");
 let ChatbotModule = class ChatbotModule {
 };
-exports.ChatbotModule = ChatbotModule;
-exports.ChatbotModule = ChatbotModule = __decorate([
+ChatbotModule = __decorate([
     (0, common_1.Module)({
         imports: [settings_module_1.SettingsModule],
         controllers: [chatbot_controller_1.ChatbotController],
         providers: [chatbot_service_1.ChatbotService],
     })
 ], ChatbotModule);
+exports.ChatbotModule = ChatbotModule;
 //# sourceMappingURL=chatbot.module.js.map
