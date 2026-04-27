@@ -11,6 +11,7 @@ import { ProductsModule } from './products/products.module';
 import { SettingsModule } from './settings/settings.module';
 import { ChatbotModule } from './chatbot/chatbot.module';
 import { BlogsModule } from './blogs/blogs.module';
+import { CertificationsModule } from './certifications/certifications.module';
 
 @Module({
   imports: [
@@ -44,6 +45,7 @@ import { BlogsModule } from './blogs/blogs.module';
     SettingsModule,
     ChatbotModule,
     BlogsModule,
+    CertificationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
